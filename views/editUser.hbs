@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <h2>Add User</h2>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            {{#each users}}
+            <form class="form-horizontal" method="post" action="/updateUser/{{this.id}}">
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" value="{{this.fname}}">
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" class="form-control" id="lname" placeholder="Enter last name" name="lname" value="{{this.lname}}">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="{{this.email}}">
+                </div>
+                <div class="form-group">
+                    <label for="prof">Proffession:</label>
+                    <input type="text" class="form-control" id="prof" placeholder="Enter proffession" name="prof" value="{{this.prof}}">
+                </div>
+                <button type="submit" class="btn btn-primary">Update User</button>
+            </form>
+                {{/each}}
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+
